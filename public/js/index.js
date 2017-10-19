@@ -10,7 +10,7 @@ SC.initialize({
 
 // stream track id 293
 SC.stream('/tracks/12429667').then(function(player){
-  ;
+  
 });
 
 // find all sounds of buskers licensed under 'creative commons share alike'
@@ -20,10 +20,10 @@ SC.get('/tracks', {  q: 'songs', }).then(function(tracks) {
     player.play();
 
 //all event listeners go buttons in here
-var play = document.getElementById('play');
-var pause = document.getElementById('pause');
-var stop = document.getElementById('stop');
-var next = document.getElementById('next');
+var btn1 = document.getElementById('btn1');
+var btn2 = document.getElementById('btn2');
+var btn3 = document.getElementById('btn3');
+var btn4 = document.getElementById('btn4');
 
 
 
@@ -35,9 +35,9 @@ function pause() {
   player.pause();
 }
 
-function stop() {
-  player.pause();
-}
+//function stop() {
+//  player.pause();
+//}
 
 //function next() {
 //  SC.get('/tracks', {  q: 'john', }).then(function(tracks) {
@@ -48,10 +48,10 @@ function stop() {
 
 
 
-play.addEventListener('click', play)
-pause.addEventListener('click', pause)
-next.addEventListener('click', next)
-stop.addEventListener('click', stop)
+btn1.addEventListener('click', play)
+btn2.addEventListener('click', pause)
+btn3.addEventListener('click', next)
+btn4.addEventListener('click', stop)
 
 
 

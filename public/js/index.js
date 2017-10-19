@@ -58,21 +58,21 @@ var trackList;
              player.seek(0);
            };
 
-      
-
-          function next() {
-            SC.get('/tracks', {
-              q: 'rock',
-            }).then(function(tracks) {
-            let secondTrack = tracks[1];
-             SC.stream('/tracks/' + secondTrack.id).then(function(player) {
-                player.play();
 
 
-                btn1.addEventListener('click', play);
-                btn2.addEventListener('click', pause);
-                btn3.addEventListener('click', stop);
-                btn4.addEventListener('click', next);
+//          function next() {
+//            SC.get('/tracks', {
+//              q: 'rock',
+//            }).then(function(tracks) {
+//            let secondTrack = tracks[1];
+//             SC.stream('/tracks/' + secondTrack.id).then(function(player) {
+//                player.play();
+
+
+//                btn1.addEventListener('click', play);
+//                btn2.addEventListener('click', pause);
+//                btn3.addEventListener('click', stop);
+//  //              btn4.addEventListener('click', next);
 
 });
 });

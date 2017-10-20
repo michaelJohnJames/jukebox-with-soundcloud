@@ -2,17 +2,13 @@
     box-sizing: border-box;
   }
 
-.body {
-
-}
-
   .songbox {
     width: 1000px;
     height: 300px;
     background-color: white;
     font-size: 32px;
     font-family: sans-serif;
-    border: 3px solid white;
+    border: 2px solid red;
     border-radius: 10%;
     z-index: 999;
     position: relative;
@@ -34,7 +30,7 @@
 
   #songtitle {
     color: black;
-    height: 75px;
+    height: 60px;
     width: 550px;
     font-size: 25px;
     font-family: American Typewriter, serif;
@@ -55,16 +51,45 @@
 #songinfo {
   color: black;
   width: 550px;
-  height: 75px;
-  font-size: 20px;
+  height: 100px;
+  font-size: 15px;
   font-family: American Typewriter, serif;
   margin-left: 370px;
   padding: 8px;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 5px;
   overflow: scroll;
   position: relative;
 }
+
+#songlink {
+  color: black;
+  width: 550px;
+  height: 50px;
+  font-size: 15px;
+  font-family: American Typewriter, serif;
+  margin-left: 370px;
+  padding: 8px;
+  text-align: center;
+  margin-top: 10px;
+  overflow: scroll;
+  position: relative;
+}
+
+/* #artistlink {
+  color: black;
+  width: 550px;
+  height: 50px;
+  font-size: 15px;
+  background-color: orange;
+  font-family: American Typewriter, serif;
+  margin-left: 370px;
+  padding: 8px;
+  text-align: center;
+  margin-top: 10px;
+  overflow: scroll;
+  position: relative;
+} */
 
   .container {
     width: 100%;
@@ -75,26 +100,27 @@
     border: 5px dashed black;
   }
 
-/* #searchbar {
-height: 400px;
+ #searchbar {
+  height: 400px;
   margin-top: -50px;
   position: relative;
   z-index: 900;
-} */
+  color: black;
+}
 
  #search {
   width: 200px;
-  height: 200px;
+  height: 20px;
   position: relative;
   display: inline-block;
-  color: white;
+  color: black;
   margin-top: 75px;
   margin-left: -300px;
 }
 
   .button-box {
     top: 300px;
-    margin-left: 470px;
+    margin-left: 400px;
     width: 1000px;
     height: 200px;
     padding: 20px;
@@ -107,6 +133,7 @@ height: 400px;
     height: 50px;
     background-color: white;
     border-radius: 10%;
+    border: 1px solid red;
     box-shadow: 1px 1px 5px black;
     display: inline;
     color: black;
@@ -125,6 +152,7 @@ height: 400px;
     width: 80px;
     height: 50px;
     background-color: white;
+    border: 1px solid red;
     border-radius: 10%;
     box-shadow: 1px 1px 5px black;
     display: inline;
@@ -143,6 +171,7 @@ height: 400px;
     height: 50px;
     background-color: white;
     border-radius: 10%;
+    border: 1px solid red;
     box-shadow: 1px 1px 5px black;
     display: inline;
     color: black;
@@ -160,6 +189,7 @@ height: 400px;
     height: 50px;
     background-color: white;
     border-radius: 10%;
+    border: 1px solid red;
     box-shadow: 1px 1px 5px black;
     display: inline;
     color: black;
@@ -171,7 +201,7 @@ height: 400px;
     position: relative;
   }
 
-  button:hover {
+button:hover {
   background-color: black;
   color: white;
   box-shadow: 1px 1px 1px black;

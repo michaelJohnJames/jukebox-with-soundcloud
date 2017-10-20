@@ -4,15 +4,6 @@
       client_id: client_id
     });
 
-
-    // stream track id 293
-    //  SC.stream('/tracks/293').then(function(player) {
-
-    //});
-
-    // find all sounds of buskers licensed under 'creative commons share alike'
-
-
     var songtext = document.getElementById('songtext');
     var searchtext = document.getElementById('search');
     var picture = document.getElementById('pic');
@@ -20,13 +11,12 @@
     var songlink = document.getElementById('songlink');
 
     SC.get('/tracks', {
-         q: 'jazz',
+         q: 'kids',
       }).then(function(tracks) {
           let firstTrack = tracks[0];
 
           SC.stream('/tracks/' + firstTrack.id).then(function(player) {
             player.play();
-            //firstTrack.id = songtext.innerHTML;
 
             //all event listeners for buttons in here
             var btn1 = document.getElementById('btn1');
@@ -38,14 +28,12 @@
             var searchtext = document.getElementById('search');
             var picture = document.getElementById('pic');
 
-
-
             songtext.innerHTML = firstTrack.title;
             songinfo.innerHTML = firstTrack.description;
             songlink.innerHTML = "Track: " + firstTrack.permalink_url;
             picture.src = firstTrack.artwork_url;
 
-        
+
           function play() {
             player.play();
           };
@@ -88,9 +76,9 @@ player.seek(0);
 
 
 function next() { SC.get('/tracks', {
-    q: "songs"
+    q: "kids"
   }).then(function(tracks) {
-      let secondTrack = tracks[6];
+      let secondTrack = tracks[1];
 
     SC.stream('/tracks/' + secondTrack.id).then(function(player) {
         player.play();
@@ -107,6 +95,7 @@ function next() { SC.get('/tracks', {
 
         songtext.innerHTML = secondTrack.title;
         songinfo.innerHTML = secondTrack.description;
+        songlink.innerHTML = "Track: " + secondTrack.permalink_url;
         picture.src = secondTrack.artwork_url;
 
         function play() {

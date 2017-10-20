@@ -11,7 +11,7 @@
     var songlink = document.getElementById('songlink');
 
     SC.get('/tracks', {
-         q: 'kids',
+         q: 'blinded',
       }).then(function(tracks) {
           let firstTrack = tracks[0];
 

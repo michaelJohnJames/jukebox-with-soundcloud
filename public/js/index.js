@@ -17,7 +17,7 @@ var trackList;
     var songtext = document.getElementById('songtext');
 
     SC.get('/tracks', {
-        q: 'rock',
+        q: 'hello',
       }).then(function(tracks) {
           let firstTrack = tracks[0];
 

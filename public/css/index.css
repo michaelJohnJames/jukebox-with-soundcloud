@@ -33,24 +33,27 @@
   }
 
   #songtitle {
-  color: black;
-
-height: 75px;
-width: 550px;
-  font-size: 25px;
-  font-family: American Typewriter, serif;
-  margin-left: 370px;
-  margin-top: -200px;
-  padding: 8px;
-  text-align: center;
-  position: relative;
+    color: black;
+    height: 75px;
+    width: 550px;
+    font-size: 25px;
+    font-family: American Typewriter, serif;
+    margin-left: 370px;
+    margin-top: -200px;
+    padding: 8px;
+    text-align: center;
+    position: relative;
 
 }
 
+/* form {
+  position: relative;
+  padding: 100px;
+  width: 200px;
+} */
 
 #songinfo {
   color: black;
-
   width: 550px;
   height: 75px;
   font-size: 20px;
@@ -77,18 +80,20 @@ height: 400px;
   margin-top: -50px;
   position: relative;
   z-index: 900;
-}
+} */
 
  #search {
   width: 200px;
   height: 200px;
   position: relative;
+  display: inline-block;
   color: white;
-  margin-top: 50px;
-} */
+  margin-top: 75px;
+  margin-left: -300px;
+}
 
   .button-box {
-    top: 375px;
+    top: 300px;
     margin-left: 470px;
     width: 1000px;
     height: 200px;

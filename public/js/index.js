@@ -17,7 +17,7 @@ var trackList;
     var songtext = document.getElementById('songtext');
 
     SC.get('/tracks', {
-        q: 'hello',
+        q: 'pearl+jam',
       }).then(function(tracks) {
           let firstTrack = tracks[0];
 
@@ -35,8 +35,10 @@ var trackList;
             var songtext = document.getElementById('songtitle');
             var release = document.getElementById('releasedate');
 
+
             songtext.innerHTML = firstTrack.title;
-            //    songtext.innerHTML = 'Genre ' + firstTrack.genre;
+            //songinfo.innerHTML = firstTrack.purchase_url;
+          //  img.innerHTML = firstTrack.artwork.url;
             //  release.innerHTML = (firstTrack.release_month + firstTrack.release_day + ', ' + firstTrack.release_year)
 
 

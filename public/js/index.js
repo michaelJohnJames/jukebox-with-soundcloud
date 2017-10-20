@@ -13,6 +13,7 @@
     SC.get('/tracks', {
          q: 'blinded',
       }).then(function(tracks) {
+
           let firstTrack = tracks[0];
 
           SC.stream('/tracks/' + firstTrack.id).then(function(player) {
@@ -78,7 +79,8 @@ player.seek(0);
 function next() { SC.get('/tracks', {
     q: "kids"
   }).then(function(tracks) {
-      let secondTrack = tracks[1];
+
+ let secondTrack = tracks[1];
 
     SC.stream('/tracks/' + secondTrack.id).then(function(player) {
         player.play();

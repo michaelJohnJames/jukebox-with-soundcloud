@@ -10,13 +10,16 @@
     var searchbutton = document.getElementById('searchbtn');
     var songlink = document.getElementById('songlink');
 
+var x = 0
+
     SC.get('/tracks', {
-         q: 'blinded',
+         q: 'pearl+jam',
       }).then(function(tracks) {
 
-          let firstTrack = tracks[0];
 
-          SC.stream('/tracks/' + firstTrack.id).then(function(player) {
+          var currentTrack = tracks[x];
+
+          SC.stream('/tracks/' + currentTrack.id).then(function(player) {
             player.play();
 
             //all event listeners for buttons in here
@@ -29,10 +32,10 @@
             var searchtext = document.getElementById('search');
             var picture = document.getElementById('pic');
 
-            songtext.innerHTML = firstTrack.title;
-            songinfo.innerHTML = firstTrack.description;
-            songlink.innerHTML = "Track: " + firstTrack.permalink_url;
-            picture.src = firstTrack.artwork_url;
+            songtext.innerHTML = currentTrack.title;
+            songinfo.innerHTML = currentTrack.description;
+            songlink.innerHTML = "Track: " + currentTrack.permalink_url;
+            picture.src = currentTrack.artwork_url;
 
 
           function play() {
@@ -77,12 +80,13 @@ player.seek(0);
 
 
 function next() { SC.get('/tracks', {
-    q: "kids"
+    q: "pearl+jam"
   }).then(function(tracks) {
 
- let secondTrack = tracks[1];
+x++;
+ var currentTrack = tracks[x + 1];
 
-    SC.stream('/tracks/' + secondTrack.id).then(function(player) {
+    SC.stream('/tracks/' + currentTrack.id).then(function(player) {
         player.play();
 
 
@@ -95,10 +99,10 @@ function next() { SC.get('/tracks', {
         var release = document.getElementById('releasedate');
         var picture = document.getElementById('pic');
 
-        songtext.innerHTML = secondTrack.title;
-        songinfo.innerHTML = secondTrack.description;
-        songlink.innerHTML = "Track: " + secondTrack.permalink_url;
-        picture.src = secondTrack.artwork_url;
+        songtext.innerHTML = currentTrack.title;
+        songinfo.innerHTML = currentTrack.description;
+        songlink.innerHTML = "Track: " + currentTrack.permalink_url;
+        picture.src = currentTrack.artwork_url;
 
         function play() {
           player.play();
